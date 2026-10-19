@@ -1,0 +1,17 @@
+Probabilidad en Machine Learning: Fuentes de Incertidumbre y Modelos
+
+En esta clase el profe habla de como entrenar un modelo, donde se hace por medio de diferentes fases:
+Entrenamiento:
+Etiquetas: donde se le entrega al modelo unos documentos de conocimiento supongo, el cual, extrae los atributos o las variables y por consiguiente se desarrolla el Algoritmo ML
+Predicción:
+Que es supongo yo cuando el modelo ya se esta ajustando y se están haciendo pruebas, se le dan más documentos para enriquecer su conocimiento y sus atributos o variables para que la predicción salga más precisa
+El resultado de la fase de predicción es la etiqueta que es mi resultado
+
+Luego explico todas las etapas del modelo que no entiendo en que se diferencian de lo antes visto
+Entrenamiento:
+Arquitectura->disenho naive bayes->Entrenamiento MLE-> calibracion y optimizacion bayesiana
+Prediccion:
+Interpretacion de la prediccion-> resultado
+
+tengo una duda enorme:
+en mi trabajo en marsh uso una IA local, es chatgpt, tiene opción para hacer asistentes, hice 1 donde le puse las variables de mis tareas diarias, conocimiento basto de casi todo, etc, yo le doy mis requests y el asistente los procesa y el output me sirve para procesar mucho mas fácil el request. mi pregunta es, si yo a ese asistente le cargue la base de datos con conocimiento y variables, eso fue entrenar un MML? o simplemente fue ponerle unos archivos a un asistente. siento que hacer el entrenamiento a un ML es algo mucho mas complicado de solo haberle cargado unos archivos a un asistente de IA

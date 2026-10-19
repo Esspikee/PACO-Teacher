@@ -1,0 +1,35 @@
+PCA ANALISIS DE COMPONENTES PRINCIPALES Y PROYECCION DE VECTORES
+
+primero se dibujan dos vectores, dos líneas con direcciones arbitrarias, donde uno tiene una "sombra sobre el otro" entonces desde el vertice del vector a proyectado en el vector b, esa longitud es la proyección, es difícil de explicar con palabras y es mas fácil con el dibujo
+
+luego para proyectar un vector, para saber sus "coordenadas" de como se proyecta en la grafica, se debe hacer una formula un tanto compleja que no tengo idea de como escribirla en un bloc de notas pero es básicamente hacer un calculo entre el vector a y el vector b para saber cuanto se esta proyectando el uno sobre el otro
+
+luego el profe explica gráficamente como con un montón de datos dispersos sobre un plano cartesiano se pueden dibujar vectores arbitrarios que por intuision uno piense que van en esa dirección y que están mas cercanos a ese vector, para luego calcular la covarianza y luego hacer el calculo de proyección de los vectores sobre esa matriz y asi conseguir el PCA
+
+
+REDUCCION DE DIMENSIONALIDAD CON PCA
+en esta clase estamos trabajando con  Python, importando librerías como numpy, pandas, matplotlib, seaborn y de sklearn.preprocessing importamos una herramienta que se llama StandardScaler, luego cargamos el dataset de "iris" que es sobre plantas. se le aplicó el StandardScaler, se le aplico la linea de scaler.fit_transform [sepal_lenght, sepal_width, petal_width, petal_lenght) y luego se usó el código covariance _matrix = np.cov (scaled.T), lo cual me confunde ya que en una actividad pasada hice este scaled.T y la actividad me quedó mal. 
+Luego sacamos las correlaciones de las variables, luego de ver alguna correlación, se aplicó el sns.joinplot a esas dos variables a las que vimos la correlación para hacer un diagrama de dispersión solo con esas dos variables, luego el profe estandarizó los datos antes de aplicar el PCA. Dice que el PCA solo calcula la sombra de los vectores considerando que los datos esta centrado. es decir, que tenemos que tener nuestros datos estandarizados, con una desviación estándar de 1. Luego de Numpy se usa la herramienta eig, donde con un código, aplicando este np.linalg.eig(covariance_matrix) se hace la descomposición de las matrices. Lueg el profesor explica algo que no entendí en absoluto
+
+variance_explained = ()
+for i in eigen_values:
+	variance_explained.append((i/sum(eigen_values))*100)
+
+print(variance_epxlained)
+
+que no entendí para nada, solo que el resultado de este código dió el valor de los 4 vectores, donde el primero dió 72.96, el segundo 22.85, el tercero 3.66 y el cuarto 0.5, donde supongo que el primero y segundo tienen mucha mas importancia que los otros
+
+luego de scikitlearn importamos el PCA
+
+pca = PCA(n_components=2)
+pca.fit (scaled)
+
+todavía no entiendo lo de los datos centralizados pero entiendo que pca solo funciona con datos centralizados y por esto tocó estandarizarlos con scaled
+
+luego ahora esas dos líneas de código arrojaron los 2 vectores más importantes, las que más varianza capturan ya que le dimos n components = 2
+
+Luego con esta linea de código
+
+reduced_scaled = pca.transform(scaled)
+
+lo que pasó fue que ahora las cuatro variables que habíamos escogido[sepal_lenght, sepal_width, petal_width, petal_lenght)  en vez de 4

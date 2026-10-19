@@ -1,0 +1,22 @@
+Construcción y Análisis de la Matriz de Covarianza en Python
+
+la covarianza
+es la cantidad cuantificada de la relación de una variable vs otra.
+Mediante la transformación de datos para que todos se encuentren entre un rango "trabajable", puede ser una covarianza positiva donde las dos variables cambian hacía la misma dirección, puede ser negativa donde si una sube la otra baja 
+
+la correlacion
+es la cantidad cuantificada de cuanto varia una variable vs otra entre -1,0 y 1. Donde si el numero de la relación cuantificada se acerca mas a 1 es porque la relación es mas fuerte y si se acerca a -1 la relación es mas débil
+
+Análisis de la Matriz de covarianza en Python
+es un cuadro con una lista en x y en Y de las variables donde respectivamente de cada fila y columna donde se encuentran: se mide la covarianza entre ambas variable y se pone al cuadrado cuando se enfrenta la misma variable en la fila y la columna 
+
+Ahora, en python, usando pandas y seaborn podemos dibujar diagramas de dispersion con cada variable para buscar correlaciones entre variables. se puede filtrar por especies, es decir por variables independientes. esto para la parte visual.
+ 
+para la parte analítica  se uso el comando
+scaler = StandardScaler () 
+scaled = scaler.fit_transform(las columnas de los datos que quiero transformar para que sean trabajables)
+Esto lo que hace es estandarizar los datos, luego de estandarizados, se puede calcular la covarianza con 
+covariance_matrix = np.cov (scaled.T) usando Pandas
+al calcular las covarianzas con este comando, Pandas nos entrega la matriz con las covarianzas, recordar que la matriz en diagonal mostrara el numero máximo porque se calcula la variable con ella misma. Esta matriz la podemos graficar con Seaborn
+
+al graficarlo, Seaborn, nos muestra las correlaciones en un mapa de calor que coincide con la parte visual que se vio anteriormente. en la parte visual en los graficos que tenían muchos puntos muy pegados entre si, coincide con la covarianza que mostro Seaborn cuando hicimos el mapa de calor de la covarianza

@@ -1,0 +1,5 @@
+Estimación de Maxima Verosimilitud en modelado estadístico
+
+No entiendo absolutamente nada porque son un montón de formulas asi:
+
+\[P(X;\theta )=L(X;\theta )\]\[\max L(X;\theta )\rightarrow \max \prod _{i}P(X_{i};\theta )\]\[\max \log L(X;\theta )\rightarrow \max \sum _{i}\log P(X_{i};\theta )\]

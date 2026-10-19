@@ -1,0 +1,19 @@
+Algebra lineal Vectores y valores propios de una Matriz
+
+la matriz de covarianza es el objeto matematico que permite identificar cuales variables estan altamente relacionadas. 
+
+Hay un proceso llamado PCA para cuando solo necesitamos una sola variable
+
+la transposicion de matrices es ubicar cada fila como columna.
+
+una matriz cuadrada es porque tiene el mismo numero de columnas y filas
+
+Para estas matrices se pueden hacer sumas y multiplicaciones, por el momento solo vemos matrices cuadradas
+
+Por alguna razon empezamos a ver los inversos de los numeros, donde menciona Tambien que las matrices tienen sus inversos y donde se puede usar NumPy con el codigo np.linalg.inv para sacar la inversa de dicha matriz y para corroborar que este bien, se multiplica la matriz original con la matriz inversa, sigo sin entender para que
+
+un vector es una matriz de una sola columna al que también se le pueden aplicar la suma y multiplicación entre vectores, mi pregunta es: y las otras operaciones? resta, division, potenciación, etc?
+
+al final el profesor muestra como con código se puede llegar a calcular multiples incognitas que podamos tener cuando tenemos vectores y matrices cuadradas
+
+al final no comprendí para que se usan las matrices y vectores, para que quiero aplicarles suma o multiplicación o calcular la longitud de un vector en un plano cartesiano si no se como aplicarlo a la vida real 

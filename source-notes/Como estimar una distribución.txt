@@ -1,0 +1,19 @@
+Como estimar una distribución?
+El profesor hizo en un google colab un generador de datos y lo puso en un histograma con pyplot
+Luego escribió todo esto
+sample = normal(loc=50, scale=5, size=1000) # mu = 50, sigma = 5
+mu = sample.mean()
+sigma = sample.std()
+dist = norm(mu, sigma)
+values = [value for value in range(30, 70)]
+probabilidades = [dist.pdf(value) for value in values]
+pyplot.hist(sample, bins = 30, density=True)
+pyplot.plot(values, probabilidades)
+pyplot.show()
+
+Ahora en el histograma apareció lo que el llama una campana de gauss sobrelapeando el histograma. Dice que es un ejemplo de estimación paramétrica
+
+ Ahora para una estimación no paramétrica según vi es cuando tenemos dos arreglos de datos, dos distribuciones y el kernel no se ajusta a las distribuciones ya que son dos entonces scikitlearn lo que hace es unir las dos distribuciones y unir los dos kernels para que quede la distribución bimodal.
+
+Mi pregunta es, para que quiero ese kernel creo que se llama, o esa campana de gauss sobrelapeando mis datos, o en si, cualquier kernel sobrelapeando mis datos?
+
